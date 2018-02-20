@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+      <title>API Baker</title>
+    
+    <meta charset="utf-8">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    
+    
+    <style>
+  html {
+    height:100%
+  }
+  body {
+    height:100%;
+    overflow-y:hidden;
+    padding-top: 52px;
+    padding-left:0px;
+    padding-right:0px;
+    overflow-x:auto
+  }
+
+    </style>
+        <script src="https://unpkg.com/js-beautify@1.7.2/js/lib/beautify.js" async></script>
+        <script src="https://unpkg.com/sql.js@0.5.0/js/sql.js" async></script>
+        <script src="https://unpkg.com/google-code-prettify@1.0.5/bin/prettify.min.js" async></script>
+  </head>
+  <body>
+  <div class="" id="app" style="min-width: 768px;height:100%">
+
+        
+    
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">API Baker</a>
+          </div>
+          <div id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+              <li><a href="./" target="_blank">New</a></li>
+              
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="https://github.com/apibaker/apibaker" target="_blank">Tutorial</a></li>
+              
+            </ul>
+          </div>
+        </div>
+      </nav>
+  
+      <div class="container-fluid" style="height:100%">
+  
+          <div class="row" style="height:100%">
+              <div class="col-xs-6" style="height:100%;padding-left:0px;padding-right:0px">
+                  <div id="codeeditor" style="height:100%"></div>
+              </div>
+              <div class="col-xs-6" style="height:100%;padding-left:1px;padding-right:0px">
+                 
+
+                        <template v-if="error==null">
+                      
+                      <ul class="nav nav-tabs nav-justified" role="tablist">
+                        <li role="presentation" class="active"><a href="#apidoc" aria-controls="apidoc" role="tab" data-toggle="tab">API</a></li>
+                        <li role="presentation"><a href="#test" aria-controls="test" role="tab" data-toggle="tab">Test</a></li>
+                        <li role="presentation"><a href="#code" aria-controls="code" role="tab" data-toggle="tab">Code</a></li>
+                      </ul>
+                    
+                      
+                      <div class="tab-content" style="height:100%;padding-bottom:40px">
+                        <div role="tabpanel" class="tab-pane active" id="apidoc" style="height:100%;overflow:auto">
+                          <div>
+                          <api-doc></api-doc>
+                          </div>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="test" style="height:100%;overflow:auto">
+                          <api-test></api-test>
+                        </div>
+                        <div role="tabpanel" class="tab-pane" id="code" style="height:100%;overflow:auto">
+                          <code-list></code-list>
+                        </div>
+                      </div>
+                      </template>
+                      <div style="margin:5px" class="alert alert-danger" role="alert" v-if="error!=null" v-html="error"></div>
+
+                    
+                    
+              </div>
+            </div>
+  
+      </div> 
+
+    <script src="https://unpkg.com/jquery@3.1.1/dist/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/vue@2.5.13/dist/vue.min.js"></script>
+    <script src="https://unpkg.com/vue-router@3.0.1/dist/vue-router.min.js"></script>
+    <script src="https://unpkg.com/vuex@3.0.1/dist/vuex.min.js"></script>
+    
+
+    <script src="https://unpkg.com/ace-builds@1.3.1/src-min-noconflict/ace.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/ace-builds@1.3.1/src-min-noconflict/theme-twilight.js" charset="utf-8"></script>
+    <script src="https://unpkg.com/ace-builds@1.3.1/src-min-noconflict/mode-javascript.js" charset="utf-8"></script>
+
+    <script src="https://unpkg.com/dot@1.1.2/doT.min.js"></script>
+
+    <script src="https://unpkg.com/file-saver@1.3.3/FileSaver.min.js"></script>
+    <script src="https://unpkg.com/jszip@3.1.5/dist/jszip.min.js"></script>
+    
+
+    <script src="js/apibaker-core.min.js"></script>
+
+
+    <script src="js/apibaker-web.min.js"></script>
+
+
+
+
+
+
+
+  </div></body>
+</html>
